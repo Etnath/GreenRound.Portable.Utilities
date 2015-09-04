@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenRound.Portable.Utilities", "GreenRound.Portable.Utilities\GreenRound.Portable.Utilities.csproj", "{C5408466-189E-4029-B594-0ABDBA983CDC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenRound.Portable.Utilities.Harness", "GreenRound.Portable.Utilities.Harness\GreenRound.Portable.Utilities.Harness.csproj", "{DFEDD10C-EE16-46DF-8510-5DAF1BA4F3F8}"
