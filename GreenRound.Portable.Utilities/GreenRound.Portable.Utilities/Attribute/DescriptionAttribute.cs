@@ -55,6 +55,11 @@ namespace GreenRound.Portable.Utilities.Attribute
                 return true;
             }
             return false;
-        }       
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

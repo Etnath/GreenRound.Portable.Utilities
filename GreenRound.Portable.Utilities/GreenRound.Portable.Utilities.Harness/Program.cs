@@ -29,29 +29,29 @@ namespace GreenRound.Portable.Utilities.Harness
 	{
 		static void Main(string[] args)
 		{
-		    MyPrototype prototype = new MyPrototype("Data", new DeepData("DeepData"));
-            MyPrototype shallowPrototype = prototype.Clone();
-            MyPrototype deepPrototype = prototype.DeepCopy();
+		    MyPrototypeBase prototypeBase = new MyPrototypeBase("Data", new DeepData("DeepData"));
+            MyPrototypeBase shallowPrototypeBase = prototypeBase.Clone();
+            MyPrototypeBase deepPrototypeBase = prototypeBase.DeepCopy();
 
-            deepPrototype.FieldDeepData.DeepString = "DeepCopiedDeepData";
-		    deepPrototype.FieldString = "DeepCopiedData";
+            deepPrototypeBase.FieldDeepData.DeepString = "DeepCopiedDeepData";
+		    deepPrototypeBase.FieldString = "DeepCopiedData";
 
-            shallowPrototype.FieldDeepData.DeepString = "ShallowedDeepData";
-		    shallowPrototype.FieldString = "ShallowedData";
+            shallowPrototypeBase.FieldDeepData.DeepString = "ShallowedDeepData";
+		    shallowPrototypeBase.FieldString = "ShallowedData";
 
             Console.WriteLine("Original");
-            Console.WriteLine(prototype.FieldDeepData.DeepString);
-            Console.WriteLine(prototype.FieldString);
+            Console.WriteLine(prototypeBase.FieldDeepData.DeepString);
+            Console.WriteLine(prototypeBase.FieldString);
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Shallow Copy");
-            Console.WriteLine(shallowPrototype.FieldDeepData.DeepString);
-            Console.WriteLine(shallowPrototype.FieldString);
+            Console.WriteLine(shallowPrototypeBase.FieldDeepData.DeepString);
+            Console.WriteLine(shallowPrototypeBase.FieldString);
             Console.WriteLine(string.Empty);
 
             Console.WriteLine("Deep Copy");
-            Console.WriteLine(deepPrototype.FieldDeepData.DeepString);
-            Console.WriteLine(deepPrototype.FieldString);
+            Console.WriteLine(deepPrototypeBase.FieldDeepData.DeepString);
+            Console.WriteLine(deepPrototypeBase.FieldString);
 
 		    Console.ReadKey();
 		}
@@ -65,14 +65,14 @@ namespace GreenRound.Portable.Utilities.Harness
         }
 
         [DataContract]
-        private class MyPrototype : Prototype<MyPrototype>
+        private class MyPrototypeBase : PrototypeBase<MyPrototypeBase>
         {
             [DataMember]
             public string FieldString { get; set; }
             [DataMember]
             public DeepData FieldDeepData { get; set; }
 
-            public MyPrototype(string fieldString, DeepData fieldObject)
+            public MyPrototypeBase(string fieldString, DeepData fieldObject)
             {
                 FieldString = fieldString;
                 FieldDeepData = fieldObject;

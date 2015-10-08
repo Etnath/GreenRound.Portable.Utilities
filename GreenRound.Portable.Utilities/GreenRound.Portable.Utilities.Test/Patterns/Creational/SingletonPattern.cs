@@ -14,23 +14,22 @@
    limitations under the License.
 */
 
-namespace GreenRound.Portable.Utilities.Patterns.Creational
+using GreenRound.Portable.Utilities.Patterns.Creational;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace GreenRound.Portable.Utilities.Test.Patterns
 {
-    /// <summary>
-    /// Interface for class that wants to follow the prototype pattern
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public interface IPrototype<T> where T : class 
+    [TestClass]
+    public class SingletonPattern
     {
-        /// <summary>
-        /// Returns a shallow copy of itself
-        /// </summary>
-        ///<returns></returns>
-        T Clone();
-        /// <summary>
-        /// Return a deep copy of itself
-        /// </summary>
-        /// <returns></returns>
-        T DeepCopy();
+        [TestMethod]
+        public void SingletonPatternTestMethod()
+        {
+            Assert.IsNotNull(MySingleton.Instance);
+        }
+
+        private class MySingleton : SingletonBase<MySingleton>
+        {
+        }
     }
 }

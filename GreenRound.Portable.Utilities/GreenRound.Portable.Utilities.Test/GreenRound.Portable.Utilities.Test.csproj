@@ -60,7 +60,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Attribute\DescriptionAttributeTest.cs" />
-    <Compile Include="Patterns\PrototypePatternTest.cs" />
+    <Compile Include="Patterns\Creational\PrototypePatternTest.cs" />
+    <Compile Include="Patterns\Creational\SingletonPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

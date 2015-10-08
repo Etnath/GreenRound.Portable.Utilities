@@ -20,11 +20,11 @@ using System.Runtime.Serialization;
 namespace GreenRound.Portable.Utilities.Patterns.Creational
 {
     /// <summary>
-    /// Derive from this class for implementing the prototype pattern
+    /// Inherit from this class to implement the prototype pattern
     /// </summary>
     /// <typeparam name="T">The class that implements the prototype pattern</typeparam>
     [DataContract] //TODO: change to Serializable when SerializableAttribute is implemented
-    public abstract class Prototype<T> : IPrototype<T> where T : class
+    public abstract class PrototypeBase<T> : IPrototype<T> where T : class
     {
         /// <summary>
         /// Returns a shallow copy of itself

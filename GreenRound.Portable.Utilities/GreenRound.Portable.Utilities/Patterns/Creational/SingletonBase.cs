@@ -14,23 +14,27 @@
    limitations under the License.
 */
 
+using System;
+
 namespace GreenRound.Portable.Utilities.Patterns.Creational
 {
     /// <summary>
-    /// Interface for class that wants to follow the prototype pattern
+    /// Inherit from this class to ensure only one instance of a given class is instanciated
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public interface IPrototype<T> where T : class 
+    /// <typeparam name="T">The class that must be a singleton</typeparam>
+    public class SingletonBase<T> where T : class 
     {
         /// <summary>
-        /// Returns a shallow copy of itself
+        /// The singleton instance. the default contructor of the class T is used to build the instance.
         /// </summary>
-        ///<returns></returns>
-        T Clone();
+        private static readonly Lazy<T> _instance = new Lazy<T>(() => Activator.CreateInstance<T>());
+
         /// <summary>
-        /// Return a deep copy of itself
+        /// Return the singleton instance.
         /// </summary>
-        /// <returns></returns>
-        T DeepCopy();
+        public static T Instance
+        {
+            get { return _instance.Value; }
+        }
     }
 }

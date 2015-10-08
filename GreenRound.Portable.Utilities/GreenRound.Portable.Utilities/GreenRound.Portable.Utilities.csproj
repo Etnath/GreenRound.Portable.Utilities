@@ -64,7 +64,8 @@
     <Compile Include="Attribute\DescriptionAttribute.cs" />
     <Compile Include="Helper\EnumHelper.cs" />
     <Compile Include="Patterns\Creational\IPrototype.cs" />
-    <Compile Include="Patterns\Creational\Prototype.cs" />
+    <Compile Include="Patterns\Creational\PrototypeBase.cs" />
+    <Compile Include="Patterns\Creational\SingletonBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

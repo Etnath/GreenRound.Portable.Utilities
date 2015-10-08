@@ -33,35 +33,35 @@ namespace GreenRound.Portable.Utilities.Test.Patterns
         [TestMethod]
         public void PrototypeTestMethod()
         {
-            MyPrototype prototype = new MyPrototype("Data", new DeepData(_deepDataExpected));
-            MyPrototype shallowPrototype = prototype.Clone();
-            MyPrototype deepPrototype = prototype.DeepCopy();
+            MyPrototypeBase prototypeBase = new MyPrototypeBase("Data", new DeepData(_deepDataExpected));
+            MyPrototypeBase shallowPrototypeBase = prototypeBase.Clone();
+            MyPrototypeBase deepPrototypeBase = prototypeBase.DeepCopy();
 
-            deepPrototype.FieldDeepData.DeepString = _deepCopiedDeepDataExpected;
-            deepPrototype.FieldString = _deepCopiedDataExpected;
+            deepPrototypeBase.FieldDeepData.DeepString = _deepCopiedDeepDataExpected;
+            deepPrototypeBase.FieldString = _deepCopiedDataExpected;
 
-            shallowPrototype.FieldDeepData.DeepString = _shallowedDeepDataExpected;
-            shallowPrototype.FieldString = _shallowedDataExpected;
+            shallowPrototypeBase.FieldDeepData.DeepString = _shallowedDeepDataExpected;
+            shallowPrototypeBase.FieldString = _shallowedDataExpected;
 
-            Assert.AreEqual(_shallowedDeepDataExpected, prototype.FieldDeepData.DeepString);
-            Assert.AreEqual(_dataExpected,prototype.FieldString);
+            Assert.AreEqual(_shallowedDeepDataExpected, prototypeBase.FieldDeepData.DeepString);
+            Assert.AreEqual(_dataExpected,prototypeBase.FieldString);
 
-            Assert.AreEqual(_shallowedDeepDataExpected, shallowPrototype.FieldDeepData.DeepString);
-            Assert.AreEqual(_shallowedDataExpected, shallowPrototype.FieldString);
+            Assert.AreEqual(_shallowedDeepDataExpected, shallowPrototypeBase.FieldDeepData.DeepString);
+            Assert.AreEqual(_shallowedDataExpected, shallowPrototypeBase.FieldString);
 
-            Assert.AreEqual(_deepCopiedDeepDataExpected, deepPrototype.FieldDeepData.DeepString);
-            Assert.AreEqual(_deepCopiedDataExpected, deepPrototype.FieldString);
+            Assert.AreEqual(_deepCopiedDeepDataExpected, deepPrototypeBase.FieldDeepData.DeepString);
+            Assert.AreEqual(_deepCopiedDataExpected, deepPrototypeBase.FieldString);
         }
 
         [DataContract]
-        private class MyPrototype : Prototype<MyPrototype>
+        private class MyPrototypeBase : PrototypeBase<MyPrototypeBase>
         {
             [DataMember]
             public string FieldString { get; set; }
             [DataMember]
             public DeepData FieldDeepData { get; set; }
 
-            public MyPrototype(string fieldString, DeepData fieldObject)
+            public MyPrototypeBase(string fieldString, DeepData fieldObject)
             {
                 FieldString = fieldString;
                 FieldDeepData = fieldObject;
