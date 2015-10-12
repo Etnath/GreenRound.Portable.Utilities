@@ -4,7 +4,6 @@
 GreenRound Portable Utilities is a portable class utility that have the following targets :
 
 * .Net 4.5
-* Silverlight 5
 * Windows 8
 * Windows phone 8
 * Windows phone 8.1

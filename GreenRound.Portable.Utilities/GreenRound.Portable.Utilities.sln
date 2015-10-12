@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenRound.Portable.Utiliti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenRound.Portable.Utilities.Test", "GreenRound.Portable.Utilities.Test\GreenRound.Portable.Utilities.Test.csproj", "{981C1F81-D5DB-4D17-A43D-0C67F4DBE143}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenRound.Android.Utilities", "GreenRound.Portable.Utilities\GreenRound.Android.Utilities.csproj", "{40128C51-2BBA-4C79-BB08-B3CCABEFF181}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenRound.iOS.Utilities", "GreenRound.Portable.Utilities\GreenRound.iOS.Utilities.csproj", "{B1FF6A66-0AAC-4C8E-958D-40ACF7E5402D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenRound.Net.Utilities", "GreenRound.Portable.Utilities\GreenRound.Net.Utilities.csproj", "{2CEF4ADC-3F19-4244-9F3F-23622B03697B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{981C1F81-D5DB-4D17-A43D-0C67F4DBE143}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{981C1F81-D5DB-4D17-A43D-0C67F4DBE143}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{981C1F81-D5DB-4D17-A43D-0C67F4DBE143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40128C51-2BBA-4C79-BB08-B3CCABEFF181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40128C51-2BBA-4C79-BB08-B3CCABEFF181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40128C51-2BBA-4C79-BB08-B3CCABEFF181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40128C51-2BBA-4C79-BB08-B3CCABEFF181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1FF6A66-0AAC-4C8E-958D-40ACF7E5402D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1FF6A66-0AAC-4C8E-958D-40ACF7E5402D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1FF6A66-0AAC-4C8E-958D-40ACF7E5402D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1FF6A66-0AAC-4C8E-958D-40ACF7E5402D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CEF4ADC-3F19-4244-9F3F-23622B03697B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CEF4ADC-3F19-4244-9F3F-23622B03697B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CEF4ADC-3F19-4244-9F3F-23622B03697B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CEF4ADC-3F19-4244-9F3F-23622B03697B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
