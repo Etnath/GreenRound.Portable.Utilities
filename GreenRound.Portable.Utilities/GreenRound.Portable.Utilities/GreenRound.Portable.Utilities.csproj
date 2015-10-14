@@ -73,7 +73,11 @@
   <ItemGroup>
     <Compile Include="Attribute\DescriptionAttribute.cs" />
     <Compile Include="Helper\EnumHelper.cs" />
-    <Compile Include="IO\IFile.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\ILogOutputDestination.cs" />
+    <Compile Include="Logging\LoggingLayoutParameters.cs" />
+    <Compile Include="Logging\LoggingLayoutPreset.cs" />
+    <Compile Include="Logging\LoggingLevel.cs" />
     <Compile Include="Patterns\Creational\IPrototype.cs" />
     <Compile Include="Patterns\Creational\PrototypeBase.cs" />
     <Compile Include="Patterns\Creational\SingletonBase.cs" />
