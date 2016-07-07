@@ -81,6 +81,9 @@
     <Compile Include="Patterns\Creational\IPrototype.cs" />
     <Compile Include="Patterns\Creational\PrototypeBase.cs" />
     <Compile Include="Patterns\Creational\SingletonBase.cs" />
+    <Compile Include="Patterns\IRepository.cs" />
+    <Compile Include="Patterns\IUnitOfWork.cs" />
+    <Compile Include="Patterns\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
