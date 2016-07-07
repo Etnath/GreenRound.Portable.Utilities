@@ -22,7 +22,3 @@ This library is in pre-release for the following reasons:
 
 * A lot of planned functionalities are missing
 * It is in early development so namespace and design may change between versions. Compatibility between versions is currently not guaranteed.
-
-###Copyright remark
-
-Because of the nature of this library, class, functions, or module with similar design or purpose might already have been implemented before. If you feel this library is enfringing copyright, please create an issue ticket.
