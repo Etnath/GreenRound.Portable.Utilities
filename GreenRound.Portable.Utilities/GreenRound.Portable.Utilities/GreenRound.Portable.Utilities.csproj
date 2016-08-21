@@ -71,6 +71,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\PathFinding\AStar.cs" />
+    <Compile Include="AI\PathFinding\Node.cs" />
+    <Compile Include="AI\PathFinding\PathPoint.cs" />
+    <Compile Include="AI\PathFinding\Point.cs" />
+    <Compile Include="AI\PathFinding\SearchParameters.cs" />
     <Compile Include="Attribute\DescriptionAttribute.cs" />
     <Compile Include="Helper\EnumHelper.cs" />
     <Compile Include="Logging\ILogger.cs" />
